@@ -194,7 +194,7 @@ finishedWithSpreadsheetFeed:(GDataFeedSpreadsheet *)feed
 - (IBAction) logPressed {
     
     UINavigationController *navcon = [self navigationController];
-    LogViewController *newcon = [[LogViewController alloc] initWithPopulations:worksheets];
+    LogViewController *newcon = [[LogViewController alloc] initWithWorksheets:worksheets andService:service];
     [navcon pushViewController:newcon animated:YES];
     
 }

@@ -11,11 +11,13 @@
 
 @implementation NewEntryViewController
 
+@synthesize which;
+
 @synthesize addButton, one, two, three, four, five, six, seven, eight, nine, zero, clear;
 
 @synthesize populationTable, ratTable;
 
-@synthesize weightLabel, dateLabel;
+@synthesize weightLabel, dateLabel, pelletLabel;
 
 @synthesize service;
 
@@ -61,12 +63,9 @@
     [super dealloc];
 }
 
-- (void)didReceiveMemoryWarning
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
+    return NO;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -177,9 +176,11 @@ finishedWithRatNameCellFeed:(GDataFeedSpreadsheetCell *)feed
 {
     [super viewDidLoad];
     
+    self.which = @"Weight";
+    
     NSDate *now = [NSDate date];
     NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
-    [formatter setDateFormat:@"M/dd/yyyy"];
+    [formatter setDateFormat:@"M/d/yyyy"];
     dateLabel.text = [formatter stringFromDate:now];
     
     [populationTable reloadData];
@@ -206,11 +207,6 @@ finishedWithRatNameCellFeed:(GDataFeedSpreadsheetCell *)feed
     [zero setupAsSmallGreenButton];
     [clear setupAsSmallGreenButton];
     
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-	return NO;
 }
 
 - (void)ticket:(GDataServiceTicket *)ticket
@@ -315,10 +311,59 @@ finishedWithFindCellFeed:(GDataFeedSpreadsheetCell *)feed
 - (IBAction) addEntryPressed{
     
     
-    // TODO: ...
+    
     
     NSLog(@"Add New Entry Pressed!");
     NSLog(@"Population:%@ \n Rat:%@ \n Row: %@ \n NewWeight = %@", [[selectedWorksheet title] stringValue], [selectedRat objectForKey:@"name"], [selectedRat objectForKey:@"row"], [weightLabel text]);
+    
+    // Do entry checking...
+    
+    if (selectedWorksheet == nil){
+        
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Invalid Entry" 
+                                                        message:@"No selected population!"
+                                                       delegate:nil 
+                                              cancelButtonTitle:@"OK" 
+                                              otherButtonTitles: nil];
+        [alert show];
+        [alert release];
+        
+        return;
+    }
+    
+    if (selectedRat == nil){
+        
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Invalid Entry" 
+                                                        message:@"No selected rat!"
+                                                       delegate:nil 
+                                              cancelButtonTitle:@"OK" 
+                                              otherButtonTitles: nil];
+        [alert show];
+        [alert release];
+        
+        return;
+    }
+    
+        // Check baseline weight of rat...
+    
+    int numPellets = [[pelletLabel text] intValue];
+    
+    if (numPellets == 0 || numPellets > 10){
+        
+        NSString *msg;
+        if (numPellets == 0) msg = @"Number of pellets zero!";
+        if (numPellets > 10) msg = @"Number of pellets too large!";
+        
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Invalid Entry" 
+                                                        message:msg
+                                                       delegate:nil 
+                                              cancelButtonTitle:@"OK" 
+                                              otherButtonTitles: nil];
+        [alert show];
+        [alert release];
+        
+        return;
+    }
     
     
     // check if the current date exists in a column header
@@ -331,19 +376,51 @@ finishedWithFindCellFeed:(GDataFeedSpreadsheetCell *)feed
     
     [service fetchFeedWithQuery:cellQuery delegate:self didFinishSelector:@selector(ticket:finishedWithDateCellFeed:error:)];
     
+    NSString* entryMsg = [NSString stringWithFormat:@"Population: %@\nRat: %@\nDate: %@\nWeight: %@\nPellets: %@", [[selectedWorksheet title]stringValue], [selectedRat objectForKey:@"name"], [dateLabel text], [weightLabel text], [pelletLabel text]];
+    
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Addding Entry" 
+                                                    message:entryMsg
+                                                   delegate:nil 
+                                          cancelButtonTitle:@"OK" 
+                                          otherButtonTitles: nil];
+    [alert show];
+    [alert release];
+    
 }
 
 - (IBAction) digitPressed: (MOGlassButton*)sender{
     
-    if (sender == clear) weightLabel.text = @"0";
-    
-    else {
+    if ([which isEqualToString:@"Weight"]){
+        if (sender == clear) weightLabel.text = @"0";
         
-        int oldWeight = [weightLabel.text integerValue];
-        int newWeight = 10 * oldWeight + [sender.titleLabel.text integerValue];
-        weightLabel.text = [NSString stringWithFormat:@"%d", newWeight];
+        else {
+            
+            int oldWeight = [weightLabel.text integerValue];
+            int newWeight = 10 * oldWeight + [sender.titleLabel.text integerValue];
+            weightLabel.text = [NSString stringWithFormat:@"%d", newWeight];
+        }
     }
     
+    if ([which isEqualToString:@"Pellets"]){
+        if (sender == clear) pelletLabel.text = @"0";
+        
+        else {
+            
+            int oldWeight = [pelletLabel.text integerValue];
+            int newWeight = 10 * oldWeight + [sender.titleLabel.text integerValue];
+            pelletLabel.text = [NSString stringWithFormat:@"%d", newWeight];
+        }
+    }
+}
+
+- (IBAction) switchPressed: (UISegmentedControl*)sender;
+{
+    if (sender.selectedSegmentIndex == 0){
+        self.which = @"Weight";
+    }
+    if (sender.selectedSegmentIndex == 1){
+        self.which = @"Pellets";
+    }
 }
 
 @end

@@ -7,12 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GData.h"
 
-
-@interface RatInfoViewController : UIViewController {
-    
+@interface RatInfoViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
+ 
+    int ratColumn;
 }
 
-@property (nonatomic, retain) NSString *ratName;
+@property (nonatomic, retain) IBOutlet UILabel* ratNameLabel;
+
+@property (nonatomic,retain) GDataServiceGoogleSpreadsheet* service;
+
+@property (nonatomic,retain) GDataEntryWorksheet* worksheet;
+
+@property (nonatomic,retain) NSArray* weightEntries; // Of NSDictionary objects with keys date, pellets, weight
+
+-(id)initWithWorksheet:(GDataEntryWorksheet*)ws andService:(GDataServiceGoogleSpreadsheet*)serv andRat:(NSDictionary*)rat;
 
 @end

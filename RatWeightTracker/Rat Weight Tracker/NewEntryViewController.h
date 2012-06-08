@@ -10,12 +10,15 @@
 #import "MOGlassButton.h"
 #import "GData.h"
 
-@interface NewEntryViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
+@interface NewEntryViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+{
     
     BOOL dateExists;
     int dateColumn;
     
 }
+
+@property (nonatomic,retain) NSString* which;
 
 @property (nonatomic,retain) IBOutlet MOGlassButton* addButton;
 
@@ -26,6 +29,8 @@
 @property (nonatomic,retain) IBOutlet UILabel* weightLabel;
 
 @property (nonatomic,retain) IBOutlet UILabel* dateLabel;
+
+@property (nonatomic,retain) IBOutlet UILabel* pelletLabel;
 
 @property (nonatomic,retain) NSArray* cellEntries;
 
@@ -58,6 +63,8 @@
 - (IBAction) addEntryPressed;
 
 - (IBAction) digitPressed: (MOGlassButton*)sender;
+
+- (IBAction) switchPressed: (UISegmentedControl*)sender;
 
 
 @end
