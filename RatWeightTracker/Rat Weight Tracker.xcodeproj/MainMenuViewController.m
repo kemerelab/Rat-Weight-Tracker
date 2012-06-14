@@ -40,9 +40,9 @@ finishedWithListFeed:(GDataFeedWorksheet *)feed
         
         for (int i = 0; i < [[firstlist customElements] count]; i++){
            
-            GDataSpreadsheetCustomElement *this = [[firstlist customElements] objectAtIndex:i];
+            //GDataSpreadsheetCustomElement *this = [[firstlist customElements] objectAtIndex:i];
             
-            NSLog(@"Value = %@", [this stringValue]);
+            //NSLog(@"Value = %@", [this stringValue]);
             
         }
         
@@ -64,9 +64,9 @@ finishedWithWorksheetFeed:(GDataFeedWorksheet *)feed
             GDataEntryWorksheet *ws = [[feed entries] objectAtIndex:i];
             NSLog(@"Found worksheet %@ : with rows:%d and columns:%d", [[ws title] stringValue], [ws rowCount], [ws columnCount]);
             
-            //NSURL *listURL = [ws listFeedURL];
+            NSURL *listURL = [ws listFeedURL];
             
-            //[service fetchFeedWithURL:listURL delegate:self didFinishSelector:@selector(ticket:finishedWithListFeed:error:)];
+            [service fetchFeedWithURL:listURL delegate:self didFinishSelector:@selector(ticket:finishedWithListFeed:error:)];
         }
     }
 }
@@ -89,7 +89,7 @@ finishedWithSpreadsheetFeed:(GDataFeedSpreadsheet *)feed
                 GDataTextConstruct *titleTextConstruct = [next title];
                 NSString *title = [titleTextConstruct stringValue];
                 
-                if ([title rangeOfString:@"Population"].location == NSNotFound){
+                if ([title rangeOfString:@"Kemere Lab Rat Weights"].location == NSNotFound){
                     NSLog(@"I do not care about %@", title);
                 } else {
                     NSLog(@"Found %@", title);

@@ -8,6 +8,7 @@
 
 #import "LogViewController.h"
 #import "GData.h"
+#import "RatInfoViewController.h"
 
 
 @implementation LogViewController
@@ -33,7 +34,7 @@
     self.populationsList = ws;
     
     self.service = serv;
-    
+        
     NSLog(@"length of populations = %d", [self.populationsList count]);
     
     return self;
@@ -119,9 +120,9 @@
         
         GDataQuerySpreadsheet *cellQuery = [GDataQuerySpreadsheet queryWithFeedURL:[[selectedWorksheet cellsLink] URL]];
         
-        cellQuery.minimumRow = 2;
-        cellQuery.minimumColumn = 1;
-        cellQuery.maximumColumn = 1; // Get the first column of every row after 2.
+        cellQuery.minimumRow = 1;
+        cellQuery.maximumRow = 1;
+        cellQuery.minimumColumn = 2; // Get the first row starting at the second entry...
         
         [service fetchFeedWithQuery:cellQuery delegate:self didFinishSelector:@selector(ticket:finishedWithRatNameCellFeed:error:)];
         
@@ -132,10 +133,11 @@
     // Selected a rat
     if (indexPath.section == 1){
         
+        self.selectedRat = [ratList objectAtIndex:indexPath.row];
         
-        
-        
-        
+        UINavigationController *navcon = [self navigationController];
+        RatInfoViewController *ratcon = [[RatInfoViewController alloc] initWithWorksheet:selectedWorksheet andService:service andRat:selectedRat];
+        [navcon pushViewController:ratcon animated:YES];
     }
 }
 
@@ -154,7 +156,10 @@ finishedWithRatNameCellFeed:(GDataFeedSpreadsheetCell *)feed
         NSString *name = [[this cell] resultString];
         
         NSLog(@"Found cell R%dC1 with value %@", i+2, name);
-        NSDictionary *next = [[NSDictionary alloc] initWithObjectsAndKeys:name, @"name", [NSString stringWithFormat:@"%d", i], @"row", nil];
+        
+        if ([name isEqualToString:@"Pellets:"]) break;
+        
+        NSDictionary *next = [[NSDictionary alloc] initWithObjectsAndKeys:name, @"name", [NSString stringWithFormat:@"%d", i+2], @"column", nil];
         
         [temp addObject:next];
         

@@ -16,11 +16,13 @@
 
 @property (nonatomic, retain) IBOutlet UILabel* ratNameLabel;
 
+@property (nonatomic, retain) IBOutlet UITableView* entriesTable;
+
 @property (nonatomic,retain) GDataServiceGoogleSpreadsheet* service;
 
 @property (nonatomic,retain) GDataEntryWorksheet* worksheet;
 
-@property (nonatomic,retain) NSArray* weightEntries; // Of NSDictionary objects with keys date, pellets, weight
+@property (nonatomic,retain) NSMutableArray* weightEntries; // Of NSDictionary objects with keys date, pellets, weight
 
 -(id)initWithWorksheet:(GDataEntryWorksheet*)ws andService:(GDataServiceGoogleSpreadsheet*)serv andRat:(NSDictionary*)rat;
 

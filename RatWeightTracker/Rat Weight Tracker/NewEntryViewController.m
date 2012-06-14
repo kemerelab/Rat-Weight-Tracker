@@ -13,6 +13,8 @@
 
 @synthesize which;
 
+@synthesize notesButton, notes;
+
 @synthesize addButton, one, two, three, four, five, six, seven, eight, nine, zero, clear;
 
 @synthesize populationTable, ratTable;
@@ -121,6 +123,8 @@ finishedWithRatNameCellFeed:(GDataFeedSpreadsheetCell *)feed
 
     NSMutableArray *temp = [[[NSMutableArray alloc] init] autorelease];
     
+    numRats = 0;
+    
     for (int i = 0; i < [[feed entries] count] ; i++){
         
         GDataEntrySpreadsheetCell *this = [[feed entries] objectAtIndex:i];
@@ -129,14 +133,19 @@ finishedWithRatNameCellFeed:(GDataFeedSpreadsheetCell *)feed
         
         NSLog(@"Found cell R%dC1 with value %@", i+2, name);
         
-        NSDictionary *next = [[NSDictionary alloc] initWithObjectsAndKeys:name, @"name", [NSString stringWithFormat:@"%d", i], @"row", nil];
+        if ([name isEqualToString:@"Pellets:"]) break;
+        
+        numRats++;
+        
+        NSDictionary *next = [[NSDictionary alloc] initWithObjectsAndKeys:name, @"name", [NSString stringWithFormat:@"%d", i+2], @"column", nil];
         
         [temp addObject:next];
         
     }
     
+    NSLog(@"There are %d unique rats.", numRats);
+    
     ratList = [[NSArray alloc] initWithArray:temp];
-
     
     [ratTable reloadData];
     
@@ -153,9 +162,9 @@ finishedWithRatNameCellFeed:(GDataFeedSpreadsheetCell *)feed
         
         GDataQuerySpreadsheet *cellQuery = [GDataQuerySpreadsheet queryWithFeedURL:[[selectedWorksheet cellsLink] URL]];
         
-        cellQuery.minimumRow = 2;
-        cellQuery.minimumColumn = 1;
-        cellQuery.maximumColumn = 1; // Get the first column of every row after 2.
+        cellQuery.minimumRow = 1;
+        cellQuery.maximumRow = 1;
+        cellQuery.minimumColumn = 2;
         
         [service fetchFeedWithQuery:cellQuery delegate:self didFinishSelector:@selector(ticket:finishedWithRatNameCellFeed:error:)];
         
@@ -194,6 +203,8 @@ finishedWithRatNameCellFeed:(GDataFeedSpreadsheetCell *)feed
    
     [addButton setupAsRedButton];
     
+    [notesButton setupAsSmallGreenButton];
+    
     
     [one setupAsSmallGreenButton];
     [two setupAsSmallGreenButton];
@@ -209,11 +220,16 @@ finishedWithRatNameCellFeed:(GDataFeedSpreadsheetCell *)feed
     
 }
 
+/*
+ * Finisher method for DATE FEED
+ */
 - (void)ticket:(GDataServiceTicket *)ticket
 finishedWithDateCellFeed:(GDataFeedSpreadsheetCell *)feed
          error:(NSError *)error {
  
     self.cellEntries = [feed entries];
+    
+    int ratColumn = [[selectedRat objectForKey:@"column"] intValue];
     
     for (int i = 0; i < [[feed entries] count]; i++) {
         
@@ -221,22 +237,24 @@ finishedWithDateCellFeed:(GDataFeedSpreadsheetCell *)feed
         
         NSString *date = [[this cell] resultString];
         
-        NSLog(@"Found date - %@ : Today's date - %@", date, [dateLabel text]);
+        //NSLog(@"Found date - %@ : Today's date - %@", date, [dateLabel text]);
         
         if ([dateLabel.text isEqualToString:date]){
             dateExists = YES;
-            dateColumn =  i;
+            dateRow =  i+2;
             
-            NSLog(@"Date exists! at column %d", i);
+            NSLog(@"Date exists! at row %d", i+2);
             
-            GDataQuerySpreadsheet *cellQuery = [GDataQuerySpreadsheet queryWithFeedURL:[[selectedWorksheet cellsLink] URL]];
+            GDataQuerySpreadsheet *weightCellQuery = [GDataQuerySpreadsheet queryWithFeedURL:[[selectedWorksheet cellsLink] URL]];
             
-            cellQuery.minimumColumn = dateColumn + 2;
-            cellQuery.maximumColumn = dateColumn + 2;
-            cellQuery.minimumRow = [[selectedRat objectForKey:@"row"] intValue] + 2;
-            cellQuery.maximumRow = [[selectedRat objectForKey:@"row"] intValue] + 2;
+            weightCellQuery.minimumColumn = ratColumn;
+            weightCellQuery.maximumColumn = ratColumn;
+            weightCellQuery.minimumRow = dateRow;
+            weightCellQuery.maximumRow = dateRow;
             
-            [service fetchFeedWithQuery:cellQuery delegate:self didFinishSelector:@selector(ticket:finishedWithFindCellFeed:error:)];
+            [weightCellQuery setShouldReturnEmpty:YES];
+            
+            [service fetchFeedWithQuery:weightCellQuery delegate:self didFinishSelector:@selector(ticket:finishedWithFindCellFeed:error:)];
             
             return;
             
@@ -244,7 +262,7 @@ finishedWithDateCellFeed:(GDataFeedSpreadsheetCell *)feed
     }
     
     dateExists = NO;
-    dateColumn = [[feed entries] count];
+    dateRow = [[feed entries] count];
     
     NSLog(@"Date does not exist!!");
     
@@ -252,17 +270,17 @@ finishedWithDateCellFeed:(GDataFeedSpreadsheetCell *)feed
     
     [cellQuery setShouldReturnEmpty:YES];
     
-    cellQuery.minimumColumn = dateColumn + 2;
-    cellQuery.maximumColumn = dateColumn + 2;
+    cellQuery.minimumRow = dateRow;
+    cellQuery.maximumRow = dateRow;
     
-    NSLog(@"New column at %d", dateColumn+2);
+    NSLog(@"New row at %d", dateRow);
     
     for (int i = 0; i < [ratList count] + 1; i ++ ) {
         
         
-        cellQuery.minimumRow = i + 1;
-        cellQuery.maximumRow = i + 1;
-        NSLog(@"Doing row %d", i + 1);
+        cellQuery.minimumColumn = i + 1;
+        cellQuery.maximumColumn = i + 1;
+        NSLog(@"Doing column %d", i + 1);
         
         [service fetchFeedWithQuery:cellQuery delegate:self didFinishSelector:@selector(ticket:finishedWithNewColumnCellFeed:error:)];
         
@@ -270,22 +288,25 @@ finishedWithDateCellFeed:(GDataFeedSpreadsheetCell *)feed
     
 }
 
+/*
+ * If date not found, creates new ROW!
+ */
 - (void)ticket:(GDataServiceTicket *)ticket
 finishedWithNewColumnCellFeed:(GDataFeedSpreadsheetCell *)feed
          error:(NSError *)error {
     
     foundCell = [[feed entries] objectAtIndex:0];
     
-    int ratRow = [[selectedRat objectForKey:@"row"] intValue];
-    int thisRow = [[foundCell cell] row];
+    int ratColumn = [[selectedRat objectForKey:@"column"] intValue];
+    int thisColumn = [[foundCell cell] column];
     
-    NSLog(@"Rat row = %d & This Row = %d", ratRow, thisRow);
+    NSLog(@"Rat row = %d & This Row = %d", ratColumn, thisColumn);
     
-    if (thisRow-1 == 0) {
+    if (thisColumn == 1) {
         [[foundCell cell] setInputString:[dateLabel text]];
     }
     
-    else if (ratRow+2 == thisRow){
+    else if (ratColumn == thisColumn){
         [[foundCell cell] setInputString:[weightLabel text]];
     }
     
@@ -296,16 +317,64 @@ finishedWithNewColumnCellFeed:(GDataFeedSpreadsheetCell *)feed
     [service fetchEntryByInsertingEntry:foundCell forFeedURL:[[selectedWorksheet cellsLink] URL] delegate:nil didFinishSelector:nil];
     
 }
+             
+- (void)ticket:(GDataServiceTicket *)ticket
+finishedWithInsertingPellets:(GDataFeedSpreadsheetCell *)feed
+         error:(NSError *)error {
+    
+    GDataEntrySpreadsheetCell* this = [[feed entries] objectAtIndex:0];
+    NSLog(@"Going to edit cell %@ to %@", [[this title] contentStringValue], [pelletLabel text]);
+    NSLog(@"Current value - %@", [[this cell] resultString]);
+    
+    [[this cell] setInputString:[pelletLabel text]];
+    [service fetchEntryByInsertingEntry:this forFeedURL:[[selectedWorksheet cellsLink] URL] delegate:self didFinishSelector:@selector(ticket:finishedPellets:error:)];
+}
+             
+             
 
+/*
+ * Inserts new entry into found cell...
+ */ 
 - (void)ticket:(GDataServiceTicket *)ticket
 finishedWithFindCellFeed:(GDataFeedSpreadsheetCell *)feed
          error:(NSError *)error {
     
     foundCell = [[feed entries] objectAtIndex:0];
-    NSLog(@"Going to edit cell %@", [foundCell title]);
-    [[foundCell cell] setInputString:[weightLabel text]];
-    [service fetchEntryByInsertingEntry:foundCell forFeedURL:[[selectedWorksheet cellsLink] URL] delegate:nil didFinishSelector:nil];
+    NSLog(@"Going to edit cell %@ to %@", [[foundCell title] contentStringValue], [weightLabel text]);
+    NSLog(@"Current value - %@", [[foundCell cell] resultString]);
     
+    // Insert the weight...
+    [[foundCell cell] setResultString:[weightLabel text]];
+    [[foundCell cell] setInputString:[weightLabel text]];
+    [[foundCell cell] setNumericValue:[NSNumber numberWithInt:[[weightLabel text] intValue]]];
+    [service fetchEntryByInsertingEntry:foundCell forFeedURL:[[selectedWorksheet cellsLink] URL] delegate:self didFinishSelector:@selector(ticket:finished:error:)];
+    
+}
+
+- (void)ticket:(GDataServiceTicket *)ticket
+      finishedPellets:(GDataFeedSpreadsheetCell *)feed
+         error:(NSError *)error {
+    NSLog(@"COMPLETED ENTRY - NEW VALUE");
+}
+
+- (void)ticket:(GDataServiceTicket *)ticket
+finished:(GDataFeedSpreadsheetCell *)feed
+         error:(NSError *)error {
+    
+    NSLog(@"COMPLETED ENTRY - NEW VALUE");
+    
+    GDataQuerySpreadsheet *pelletCellQuery = [GDataQuerySpreadsheet queryWithFeedURL:[[selectedWorksheet cellsLink] URL]];
+    
+    int ratColumn = [[selectedRat objectForKey:@"column"] intValue];
+    
+    pelletCellQuery.minimumColumn = ratColumn + numRats + 1;
+    pelletCellQuery.maximumColumn = ratColumn + numRats + 1;
+    pelletCellQuery.minimumRow = dateRow;
+    pelletCellQuery.maximumRow = dateRow;
+    
+    [pelletCellQuery setShouldReturnEmpty:YES];
+    
+    [service fetchFeedWithQuery:pelletCellQuery delegate:self didFinishSelector:@selector(ticket:finishedWithInsertingPellets:error:)];
 }
 
 - (IBAction) addEntryPressed{
@@ -314,7 +383,7 @@ finishedWithFindCellFeed:(GDataFeedSpreadsheetCell *)feed
     
     
     NSLog(@"Add New Entry Pressed!");
-    NSLog(@"Population:%@ \n Rat:%@ \n Row: %@ \n NewWeight = %@", [[selectedWorksheet title] stringValue], [selectedRat objectForKey:@"name"], [selectedRat objectForKey:@"row"], [weightLabel text]);
+    NSLog(@"Population:%@ \n Rat:%@ \n Row: %@ \n NewWeight = %@", [[selectedWorksheet title] stringValue], [selectedRat objectForKey:@"name"], [selectedRat objectForKey:@"column"], [weightLabel text]);
     
     // Do entry checking...
     
@@ -370,13 +439,13 @@ finishedWithFindCellFeed:(GDataFeedSpreadsheetCell *)feed
     
     GDataQuerySpreadsheet *cellQuery = [GDataQuerySpreadsheet queryWithFeedURL:[[selectedWorksheet cellsLink] URL]];
     
-    cellQuery.minimumColumn = 2;
-    cellQuery.minimumRow = 1;
-    cellQuery.maximumRow = 1; // Get the first row starting at column 2
+    cellQuery.minimumColumn = 1;
+    cellQuery.maximumColumn = 1;
+    cellQuery.minimumRow = 2;
     
     [service fetchFeedWithQuery:cellQuery delegate:self didFinishSelector:@selector(ticket:finishedWithDateCellFeed:error:)];
     
-    NSString* entryMsg = [NSString stringWithFormat:@"Population: %@\nRat: %@\nDate: %@\nWeight: %@\nPellets: %@", [[selectedWorksheet title]stringValue], [selectedRat objectForKey:@"name"], [dateLabel text], [weightLabel text], [pelletLabel text]];
+    NSString* entryMsg = [NSString stringWithFormat:@"Population: %@\nRat: %@\nDate: %@\nWeight: %@\nPellets: %@\nNote: %@", [[selectedWorksheet title]stringValue], [selectedRat objectForKey:@"name"], [dateLabel text], [weightLabel text], [pelletLabel text], notes];
     
     UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Addding Entry" 
                                                     message:entryMsg
@@ -421,6 +490,26 @@ finishedWithFindCellFeed:(GDataFeedSpreadsheetCell *)feed
     if (sender.selectedSegmentIndex == 1){
         self.which = @"Pellets";
     }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{ 
+    NSLog(@"Entered: %@",[[alertView textFieldAtIndex:0] text]);
+    
+    self.notes = [[alertView textFieldAtIndex:0] text];
+}
+
+- (IBAction) notesPressed
+{
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Notes" message:@"Edit your note here:" delegate:self cancelButtonTitle:@"Continue" otherButtonTitles:nil];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    
+    if (self.notes != nil) {
+        UITextField* textField = [alert textFieldAtIndex:0];
+        textField.text = self.notes;
+    }
+    
+    [alert show];
+    [alert release];
 }
 
 @end

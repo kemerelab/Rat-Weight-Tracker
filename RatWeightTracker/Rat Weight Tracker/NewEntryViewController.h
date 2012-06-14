@@ -14,13 +14,18 @@
 {
     
     BOOL dateExists;
-    int dateColumn;
+    int dateRow;
+    int numRats;
     
 }
 
 @property (nonatomic,retain) NSString* which;
 
 @property (nonatomic,retain) IBOutlet MOGlassButton* addButton;
+
+@property (nonatomic,retain) IBOutlet MOGlassButton* notesButton;
+
+@property (nonatomic,retain) NSString *notes;
 
 @property (nonatomic,retain) IBOutlet UITableView* populationTable;
 
@@ -61,6 +66,8 @@
 - (id) initWithWorksheets:(NSArray*)ws andService:(GDataServiceGoogleSpreadsheet*)serv;
 
 - (IBAction) addEntryPressed;
+
+- (IBAction) notesPressed;
 
 - (IBAction) digitPressed: (MOGlassButton*)sender;
 
