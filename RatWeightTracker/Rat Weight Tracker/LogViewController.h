@@ -8,14 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "GData.h"
+#import "SpreadsheetUtility.h"
 
 
 @interface LogViewController : UITableViewController {
     
 }
 
+@property (nonatomic,retain) SpreadsheetUtility* utility;
+
 @property (nonatomic,retain) GDataServiceGoogleSpreadsheet* service;
 
+
+@property (nonatomic,retain) GDataEntrySpreadsheet* selectedSpreadsheet;
 @property (nonatomic,retain) GDataEntryWorksheet* selectedWorksheet;
 @property (nonatomic,retain) NSIndexPath* selectedWorksheetPath;
 
@@ -25,6 +30,10 @@
 
 @property (nonatomic,retain) NSArray* ratList; // of NSDictionaries with row: and name:
 
+@property (nonatomic,retain) NSArray* spreadsheetsList; // Of GDataEntrySpreadsheet.
+
 - (id) initWithWorksheets:(NSArray*)ws andService:(GDataServiceGoogleSpreadsheet*)serv;
+
+- (id) initWithSpreadsheet:(NSDictionary*)sprd andService:(GDataServiceGoogleSpreadsheet*)serv;
 
 @end

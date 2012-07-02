@@ -19,6 +19,11 @@
 
 @property (nonatomic,retain) IBOutlet MOGlassButton* logButton;
 @property (nonatomic,retain) IBOutlet MOGlassButton* addNewButton;
+@property (nonatomic,retain) IBOutlet MOGlassButton* loginButton;
+
+@property (nonatomic,retain) IBOutlet UILabel* usernameLabel;
+
+@property (nonatomic,retain) NSDictionary* worksheetDict;
 
 @property (nonatomic,retain) GDataFeedSpreadsheet* spreadSheetFeed;
 @property (nonatomic,retain) GDataFeedWorksheet* workSheetFeed;
@@ -32,5 +37,7 @@
 - (IBAction) logPressed;
 
 - (IBAction) addNewPressed;
+
+- (IBAction) loginPressed;
 
 @end

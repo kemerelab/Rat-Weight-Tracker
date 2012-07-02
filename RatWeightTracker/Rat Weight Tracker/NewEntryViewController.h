@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MOGlassButton.h"
 #import "GData.h"
+#import "SpreadsheetUtility.h"
 
 @interface NewEntryViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
@@ -18,6 +19,8 @@
     int numRats;
     
 }
+
+@property (nonatomic,retain) SpreadsheetUtility* utility;
 
 @property (nonatomic,retain) NSString* which;
 
@@ -55,9 +58,12 @@
 @property (nonatomic,retain) IBOutlet MOGlassButton* clear; 
 
 @property (nonatomic,retain) GDataServiceGoogleSpreadsheet* service;
+@property (nonatomic,retain) GDataEntrySpreadsheet* selectedSpreadsheet;
 
 @property (nonatomic,retain) GDataEntryWorksheet* selectedWorksheet;
 @property (nonatomic,retain) NSDictionary* selectedRat;
+
+@property (nonatomic,retain) NSArray* spreadsheetList;
 
 @property (nonatomic,retain) NSArray* worksheetPopulations; // Of GDataEntryWorksheets.
 

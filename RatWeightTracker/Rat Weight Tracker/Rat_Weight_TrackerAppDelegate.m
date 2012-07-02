@@ -27,6 +27,8 @@
     MainMenuViewController *menucon = [[MainMenuViewController alloc] init];
     [navcon pushViewController:menucon animated:NO];
     
+    self.window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"test_tubes.jpeg"]];
+    
     [self.window addSubview:navcon.view];
     
     [self.window makeKeyAndVisible];

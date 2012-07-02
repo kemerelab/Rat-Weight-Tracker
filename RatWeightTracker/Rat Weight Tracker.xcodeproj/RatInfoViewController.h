@@ -8,15 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "GData.h"
+#import "SpreadsheetUtility.h"
 
 @interface RatInfoViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
  
     int ratColumn;
+    NSString* name;
 }
 
 @property (nonatomic, retain) IBOutlet UILabel* ratNameLabel;
 
 @property (nonatomic, retain) IBOutlet UITableView* entriesTable;
+
+@property (nonatomic, retain) IBOutlet UITextView* notesView;
 
 @property (nonatomic,retain) GDataServiceGoogleSpreadsheet* service;
 
@@ -24,6 +28,8 @@
 
 @property (nonatomic,retain) NSMutableArray* weightEntries; // Of NSDictionary objects with keys date, pellets, weight
 
--(id)initWithWorksheet:(GDataEntryWorksheet*)ws andService:(GDataServiceGoogleSpreadsheet*)serv andRat:(NSDictionary*)rat;
+@property (nonatomic,retain) SpreadsheetUtility* utility;
+
+-(id)initWithUtility:(SpreadsheetUtility*)util andRat:(NSDictionary*)rat;
 
 @end
