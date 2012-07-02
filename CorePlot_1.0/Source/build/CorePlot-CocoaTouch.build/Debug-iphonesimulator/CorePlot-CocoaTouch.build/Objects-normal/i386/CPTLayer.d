@@ -1,0 +1,19 @@
+dependencies: \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTLayer.m \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTLayer.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTDefinitions.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTResponder.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTAxisSet.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTExceptions.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTGraph.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTBorderedLayer.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTAnnotationHostLayer.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTLineStyle.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTPathExtensions.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/iPhoneOnly/CPTPlatformSpecificDefines.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/iPhoneOnly/CPTPlatformSpecificFunctions.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTShadow.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTUtilities.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/../build/CorePlot-CocoaTouch.build/Debug-iphonesimulator/CorePlot-CocoaTouch.build/DerivedSources/CorePlotProbes.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/NSCoderExtensions.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/NSNumberExtensions.h

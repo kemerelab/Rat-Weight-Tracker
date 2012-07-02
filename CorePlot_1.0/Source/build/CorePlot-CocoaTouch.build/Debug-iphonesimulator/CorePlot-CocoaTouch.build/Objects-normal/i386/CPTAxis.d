@@ -1,0 +1,35 @@
+dependencies: \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTAxis.m \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTAxis.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTDefinitions.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTLayer.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTResponder.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTTextStyle.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTAxisLabel.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTAxisLabelGroup.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTAxisSet.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTAxisTitle.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTColor.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTExceptions.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTFill.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTGradient.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTGridLineGroup.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTGridLines.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTImage.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTLimitBand.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTLineCap.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTLineStyle.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTMutablePlotRange.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTPlotRange.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/iPhoneOnly/CPTPlatformSpecificCategories.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/iPhoneOnly/CPTPlatformSpecificDefines.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTPlotArea.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTAnnotationHostLayer.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTGraph.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTBorderedLayer.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTPlotSpace.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTShadow.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTTextLayer.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/CPTUtilities.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/NSCoderExtensions.h \
+  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/framework/Source/NSDecimalNumberExtensions.h

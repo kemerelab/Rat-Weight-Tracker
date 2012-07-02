@@ -1,0 +1,576 @@
+TCPTTestApp-iPad
+v4
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app/Info.plist CPTTestApp_iPad-Info.plist
+cCompileXIB /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/MainWindow.xib
+cCompileXIB /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/CPTTestApp_iPadViewController.xib
+cProcessPCH /var/folders/IM/IM2WLkpKGR4al18RLLucUk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CPTTestApp_iPad_Prefix-bgbjlizexgxqunczkzujcmpddkmq/CPTTestApp_iPad_Prefix.pch.pth CPTTestApp_iPad_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/Objects-normal/i386/CPTTestApp_iPadViewController.o /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/Classes/CPTTestApp_iPadViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/Objects-normal/i386/CPTTestApp_iPadAppDelegate.o /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/Classes/CPTTestApp_iPadAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/Objects-normal/i386/main.o /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app/CPTTestApp-iPad normal i386
+cGenerateDSYMFile /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app.dSYM /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app/CPTTestApp-iPad
+cTouch /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk
+c000000004FEB93490000000000000110
+t1340838729
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004E72F1CC0000000000245480
+t1316155852
+s2380928
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004E72F2960000000000353830
+t1316156054
+s3487792
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004E72F28F0000000000001534
+t1316156047
+s5428
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c000000004E72F69C00000000001A9D20
+t1316157084
+s1744160
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004E78066A0000000000000BCB
+t1316488810
+s3019
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004E7806AB00000000008F7390
+t1316488875
+s9401232
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/build/Debug-iphonesimulator/libCorePlot-CocoaTouch.a
+c000000004FEDF3A60000000000270CC8
+t1340994470
+s2559176
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/Objects-normal/i386/CPTTestApp-iPad.LinkFileList
+c000000004FEDF3A60000000000000269
+t1340994470
+s617
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/Objects-normal/i386/CPTTestApp_iPadAppDelegate.o
+t1340994471
+s61388
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/Objects-normal/i386/CPTTestApp_iPadViewController.o
+t1340994471
+s116304
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/Objects-normal/i386/main.o
+t1340994471
+s3200
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app
+t1340994472
+s238
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app.dSYM
+t1340994472
+s102
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app/CPTTestApp-iPad
+t1340994472
+s1110952
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app/CPTTestApp_iPadViewController.nib
+t1340994471
+s1465
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app/Info.plist
+t1340994470
+s836
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app/MainWindow.nib
+t1340994470
+s1156
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app/PkgInfo
+t1340994470
+s8
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/CorePlot-CocoaTouch.h
+c000000004F4118BB000000000000066E
+t1329666235
+s1646
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTAnnotation.h
+c000000004F4118BD00000000000003B7
+t1329666237
+s951
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTAnnotationHostLayer.h
+c000000004F4118BE000000000000017B
+t1329666238
+s379
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTAxis.h
+c000000004F4118BE00000000000022CD
+t1329666238
+s8909
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTAxisLabel.h
+c000000004F4118BE0000000000000419
+t1329666238
+s1049
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTAxisSet.h
+c000000004F4118BE0000000000000166
+t1329666238
+s358
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTAxisTitle.h
+c000000004F4118BE000000000000006D
+t1329666238
+s109
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTBarPlot.h
+c000000004F4118BE0000000000000F07
+t1329666238
+s3847
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTBorderedLayer.h
+c000000004F4118BF0000000000000162
+t1329666239
+s354
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTColor.h
+c000000004F4118BF0000000000000449
+t1329666239
+s1097
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTColorSpace.h
+c000000004F4118BF0000000000000198
+t1329666239
+s408
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTConstraints.h
+c000000004F4118BF00000000000003B4
+t1329666239
+s948
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTDefinitions.h
+c000000004F4118C00000000000000F6A
+t1329666240
+s3946
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTExceptions.h
+c000000004F4118C000000000000000E1
+t1329666240
+s225
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTFill.h
+c000000004F4118C00000000000000352
+t1329666240
+s850
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTGradient.h
+c000000004F4118C00000000000000C0A
+t1329666240
+s3082
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTGraph.h
+c000000004F4118C10000000000000DB8
+t1329666241
+s3512
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTImage.h
+c000000004F4118C100000000000003CB
+t1329666241
+s971
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTLayer.h
+c000000004F4118C10000000000000A7A
+t1329666241
+s2682
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTLayerAnnotation.h
+c000000004F4118C100000000000001FA
+t1329666241
+s506
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTLegend.h
+c000000004F4118C20000000000000FFE
+t1329666242
+s4094
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTLegendEntry.h
+c000000004F4118C20000000000000392
+t1329666242
+s914
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTLimitBand.h
+c000000004F4118C2000000000000021E
+t1329666242
+s542
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTLineCap.h
+c000000004F4118C20000000000000859
+t1329666242
+s2137
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTLineStyle.h
+c000000004F4118C20000000000000418
+t1329666242
+s1048
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTMutableLineStyle.h
+c000000004F4118C20000000000000236
+t1329666242
+s566
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTMutableNumericData+TypeConversion.h
+c000000004F4118C200000000000002BD
+t1329666242
+s701
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTMutableNumericData.h
+c000000004F4118C20000000000000302
+t1329666242
+s770
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTMutablePlotRange.h
+c000000004F4118C30000000000000277
+t1329666243
+s631
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTMutableShadow.h
+c000000004F4118C30000000000000161
+t1329666243
+s353
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTMutableTextStyle.h
+c000000004F4118C3000000000000017E
+t1329666243
+s382
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTNumericData+TypeConversion.h
+c000000004F4118C3000000000000032D
+t1329666243
+s813
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTNumericData.h
+c000000004F4118C300000000000007F0
+t1329666243
+s2032
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTNumericDataType.h
+c000000004F4118C4000000000000051A
+t1329666244
+s1306
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTPathExtensions.h
+c000000004F4118C40000000000000125
+t1329666244
+s293
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTPieChart.h
+c000000004F4118C40000000000000D54
+t1329666244
+s3412
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTPlot.h
+c000000004F4118C40000000000001E53
+t1329666244
+s7763
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTPlotArea.h
+c000000004F4118C50000000000000662
+t1329666245
+s1634
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTPlotAreaFrame.h
+c000000004F4118C50000000000000176
+t1329666245
+s374
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTPlotRange.h
+c000000004F4118C50000000000000780
+t1329666245
+s1920
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTPlotSpace.h
+c000000004F4118C50000000000001733
+t1329666245
+s5939
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTPlotSpaceAnnotation.h
+c000000004F4118C5000000000000019B
+t1329666245
+s411
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTPlotSymbol.h
+c000000004F4118C50000000000000964
+t1329666245
+s2404
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTRangePlot.h
+c000000004F4118C60000000000000521
+t1329666246
+s1313
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTResponder.h
+c000000004F4118C600000000000006A9
+t1329666246
+s1705
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTScatterPlot.h
+c000000004F4118C60000000000000DF6
+t1329666246
+s3574
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTShadow.h
+c000000004F4118C60000000000000245
+t1329666246
+s581
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTTextLayer.h
+c000000004F4118C60000000000000247
+t1329666246
+s583
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTTextStyle.h
+c000000004F4118C600000000000004BD
+t1329666246
+s1213
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTTheme.h
+c000000004F4118C70000000000000477
+t1329666247
+s1143
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTTimeFormatter.h
+c000000004F4118C70000000000000199
+t1329666247
+s409
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTTradingRangePlot.h
+c000000004F4118C70000000000000892
+t1329666247
+s2194
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTUtilities.h
+c000000004F4118C70000000000000E24
+t1329666247
+s3620
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTXYAxis.h
+c000000004F4118C80000000000000183
+t1329666248
+s387
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTXYAxisSet.h
+c000000004F4118C800000000000000F1
+t1329666248
+s241
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTXYGraph.h
+c000000004F4118C80000000000000157
+t1329666248
+s343
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/Source/CPTXYPlotSpace.h
+c000000004F4118C800000000000002D3
+t1329666248
+s723
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/iPhoneOnly/CPTGraphHostingView.h
+c000000004F4118BB00000000000001B4
+t1329666235
+s436
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/iPhoneOnly/CPTPlatformSpecificCategories.h
+c000000004F4118BB00000000000003AD
+t1329666235
+s941
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/iPhoneOnly/CPTPlatformSpecificDefines.h
+c000000004F4118BB000000000000005B
+t1329666235
+s91
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../framework/iPhoneOnly/CPTPlatformSpecificFunctions.h
+c000000004F4118BC0000000000000161
+t1329666236
+s353
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/CPTTestApp_iPadViewController.xib
+c000000004E978B1800000000000057ED
+t1318554392
+s22509
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/CPTTestApp_iPad_Prefix.pch
+c000000004E978B1800000000000000C7
+t1318554392
+s199
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/Classes/CPTTestApp_iPadAppDelegate.h
+c000000004F4118B800000000000001CC
+t1329666232
+s460
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/Classes/CPTTestApp_iPadAppDelegate.m
+c000000004F4118B8000000000000026B
+t1329666232
+s619
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/Classes/CPTTestApp_iPadViewController.h
+c000000004F4118B800000000000002C5
+t1329666232
+s709
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/Classes/CPTTestApp_iPadViewController.m
+c000000004F4118B80000000000003DD8
+t1329666232
+s15832
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/MainWindow.xib
+c000000004E978B180000000000004D59
+t1318554392
+s19801
+
+N/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/main.m
+c000000004F4118B80000000000000128
+t1329666232
+s296
+
+N/var/folders/IM/IM2WLkpKGR4al18RLLucUk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CPTTestApp_iPad_Prefix-bgbjlizexgxqunczkzujcmpddkmq/CPTTestApp_iPad_Prefix.pch.pth
+t1340994471
+s3949576
+
+NCPTTestApp_iPad-Info.plist
+c000000004E978B1800000000000004D6
+t1318554392
+s1238
+
+CBuild AST from /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/Classes/CPTTestApp_iPadAppDelegate.m
+r0
+
+CBuild AST from /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/Classes/CPTTestApp_iPadViewController.m
+r0
+
+CBuild AST from /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/main.m
+r0
+
+CCheck dependencies
+r0
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies8a7641cd2e9eb541^1f8642cd2e9eb541^---0#1#0#--18"Check dependencies36"02AC7193-1E8E-43CA-8FF9-1B41395F14A1-
+
+CCompileC ../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/Objects-normal/i386/CPTTestApp_iPadAppDelegate.o /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/Classes/CPTTestApp_iPadAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s362687271.721155
+e362687271.797195
+r1
+xCompileC
+x../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/Objects-normal/i386/CPTTestApp_iPadAppDelegate.o
+x/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/Classes/CPTTestApp_iPadAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection129"Compile /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/Classes/CPTTestApp_iPadAppDelegate.mcbbdb8272b9eb541^a015cc272b9eb541^---0#0#0#-19%DVTDocumentLocation2@137"file://localhost/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/Classes/CPTTestApp_iPadAppDelegate.m0000000000000000^3678"CompileC ../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/Objects-normal/i386/CPTTestApp_iPadAppDelegate.o Classes/CPTTestApp_iPadAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -iquote /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/CPTTestApp-iPad-generated-files.hmap -I/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/CPTTestApp-iPad-own-target-headers.hmap -I/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/CPTTestApp-iPad-all-target-headers.hmap -iquote /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/CPTTestApp-iPad-project-headers.hmap -iquote../../framework -iquote../../framework/iPhoneOnly -iquote../../framework/MacOnly -iquote../../framework/Source -iquote../../framework/TestResources -I/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/include -I/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/DerivedSources/i386 -I/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/DerivedSources -F/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator -include /var/folders/IM/IM2WLkpKGR4al18RLLucUk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CPTTestApp_iPad_Prefix-bgbjlizexgxqunczkzujcmpddkmq/CPTTestApp_iPad_Prefix.pch -MMD -MT dependencies -MF /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/Objects-normal/i386/CPTTestApp_iPadAppDelegate.d -c /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/Classes/CPTTestApp_iPadAppDelegate.m -o /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/Objects-normal/i386/CPTTestApp_iPadAppDelegate.o36"DDE96A7E-52E3-4B8A-ACB5-44610FF13DDF-
+
+CCompileC ../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/Objects-normal/i386/CPTTestApp_iPadViewController.o /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/Classes/CPTTestApp_iPadViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s362687271.749733
+e362687271.863717
+r1
+xCompileC
+x../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/Objects-normal/i386/CPTTestApp_iPadViewController.o
+x/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/Classes/CPTTestApp_iPadViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection132"Compile /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/Classes/CPTTestApp_iPadViewController.m9e0ac0272b9eb541^ef1ddd272b9eb541^---0#0#0#-19%DVTDocumentLocation2@140"file://localhost/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/Classes/CPTTestApp_iPadViewController.m0000000000000000^3693"CompileC ../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/Objects-normal/i386/CPTTestApp_iPadViewController.o Classes/CPTTestApp_iPadViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -iquote /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/CPTTestApp-iPad-generated-files.hmap -I/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/CPTTestApp-iPad-own-target-headers.hmap -I/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/CPTTestApp-iPad-all-target-headers.hmap -iquote /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/CPTTestApp-iPad-project-headers.hmap -iquote../../framework -iquote../../framework/iPhoneOnly -iquote../../framework/MacOnly -iquote../../framework/Source -iquote../../framework/TestResources -I/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/include -I/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/DerivedSources/i386 -I/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/DerivedSources -F/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator -include /var/folders/IM/IM2WLkpKGR4al18RLLucUk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CPTTestApp_iPad_Prefix-bgbjlizexgxqunczkzujcmpddkmq/CPTTestApp_iPad_Prefix.pch -MMD -MT dependencies -MF /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/Objects-normal/i386/CPTTestApp_iPadViewController.d -c /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/Classes/CPTTestApp_iPadViewController.m -o /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/Objects-normal/i386/CPTTestApp_iPadViewController.o36"C1774EBA-CF6E-4EA4-8BE5-69BFFC495D38-
+
+CCompileC ../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/Objects-normal/i386/main.o /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s362687271.721088
+e362687271.748501
+r1
+xCompileC
+x../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/Objects-normal/i386/main.o
+x/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection99"Compile /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/main.m44c1b8272b9eb541^8c9ebf272b9eb541^---0#0#0#-19%DVTDocumentLocation2@107"file://localhost/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/main.m0000000000000000^3552"CompileC ../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/Objects-normal/i386/main.o main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -iquote /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/CPTTestApp-iPad-generated-files.hmap -I/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/CPTTestApp-iPad-own-target-headers.hmap -I/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/CPTTestApp-iPad-all-target-headers.hmap -iquote /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/CPTTestApp-iPad-project-headers.hmap -iquote../../framework -iquote../../framework/iPhoneOnly -iquote../../framework/MacOnly -iquote../../framework/Source -iquote../../framework/TestResources -I/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/include -I/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/DerivedSources/i386 -I/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/DerivedSources -F/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator -include /var/folders/IM/IM2WLkpKGR4al18RLLucUk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CPTTestApp_iPad_Prefix-bgbjlizexgxqunczkzujcmpddkmq/CPTTestApp_iPad_Prefix.pch -MMD -MT dependencies -MF /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/Objects-normal/i386/main.d -c /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/main.m -o /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/Objects-normal/i386/main.o36"F6BDD156-B7B7-49B2-9782-EE2CA8D9DAB4-
+
+CCompileXIB /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/CPTTestApp_iPadViewController.xib
+s362687270.696683
+e362687271.440334
+r1
+xCompileXIB
+x/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/CPTTestApp_iPadViewController.xib
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection128"Compiling /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/CPTTestApp_iPadViewController.xibe867b2262b9eb541^00c570272b9eb541^---0#0#0#-19%DVTDocumentLocation2@134"file://localhost/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/CPTTestApp_iPadViewController.xib0000000000000000^863"CompileXIB CPTTestApp_iPadViewController.xib    cd /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Developer/usr/bin/..    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app/CPTTestApp_iPadViewController.nib /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/CPTTestApp_iPadViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk36"C2F077D3-B2DC-42E3-B5A3-8EF65AD08F05-
+
+CCompileXIB /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/MainWindow.xib
+s362687270.696265
+e362687270.742874
+r1
+xCompileXIB
+x/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/MainWindow.xib
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection109"Compiling /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/MainWindow.xib874fb2262b9eb541^1138be262b9eb541^---0#0#0#-19%DVTDocumentLocation2@115"file://localhost/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/MainWindow.xib0000000000000000^806"CompileXIB MainWindow.xib    cd /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Developer/usr/bin/..    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app/MainWindow.nib /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk36"CBEB85C1-24FC-4700-A51A-3400E80BA5CE-
+
+CGenerateDSYMFile /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app.dSYM /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app/CPTTestApp-iPad
+s362687272.048245
+e362687272.139921
+r1
+xGenerateDSYMFile
+x/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app.dSYM
+x/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app/CPTTestApp-iPad
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection154"Generating /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app.dSYMf9690c282b9eb541^63d223282b9eb541^---0#0#0#-19%DVTDocumentLocation2@159"file://localhost/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app.dSYM00f8c438dcffdf42^703"GenerateDSYMFile ../../build/Debug-iphonesimulator/CPTTestApp-iPad.app.dSYM ../../build/Debug-iphonesimulator/CPTTestApp-iPad.app/CPTTestApp-iPad    cd /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app/CPTTestApp-iPad -o /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app.dSYM36"68846248-6117-4BCC-9C55-0DEDF4A17D16-
+
+CLd /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app/CPTTestApp-iPad normal i386
+s362687271.865817
+e362687272.046996
+r1
+xLd
+x/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app/CPTTestApp-iPad
+xnormal
+xi386
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection159"Link /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app/CPTTestApp-iPad6bbbdd272b9eb541^8b1a0c282b9eb541^---0#0#0#--1498"Ld ../../build/Debug-iphonesimulator/CPTTestApp-iPad.app/CPTTestApp-iPad normal i386    cd /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -L/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator -F/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator -filelist /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/Objects-normal/i386/CPTTestApp-iPad.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -ObjC -all_load -Xlinker -no_implicit_dylibs -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -framework Foundation -framework UIKit -framework CoreGraphics /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/build/Debug-iphonesimulator/libCorePlot-CocoaTouch.a -framework QuartzCore -o /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app/CPTTestApp-iPad36"491823CC-15B3-4DCA-BCB1-172267E74888-
+
+CProcessInfoPlistFile /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app/Info.plist CPTTestApp_iPad-Info.plist
+s362687270.690437
+e362687270.693939
+r1
+xProcessInfoPlistFile
+x/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app/Info.plist
+xCPTTestApp_iPad-Info.plist
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection34"Process CPTTestApp_iPad-Info.plist8cd7b0262b9eb541^b4aeb1262b9eb541^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/CPTTestApp_iPad-Info.plist0000000000000000^766"ProcessInfoPlistFile ../../build/Debug-iphonesimulator/CPTTestApp-iPad.app/Info.plist CPTTestApp_iPad-Info.plist    cd /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility CPTTestApp_iPad-Info.plist -genpkginfo /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app/Info.plist36"517A359F-9EAD-4CFB-A4E7-A304BE02F9EA-
+
+CProcessPCH /Users/dummy/Library/Developer/Xcode/DerivedData/CPTTestApp-iPad-hgzuzrkxhymejwcietngzfyzcspj/Index/PrecompiledHeaders/CPTTestApp_iPad_Prefix-biubwdsocilcfxgzokscxcerxwiq_ast/CPTTestApp_iPad_Prefix.pch.pth CPTTestApp_iPad_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /var/folders/IM/IM2WLkpKGR4al18RLLucUk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CPTTestApp_iPad_Prefix-bgbjlizexgxqunczkzujcmpddkmq/CPTTestApp_iPad_Prefix.pch.pth CPTTestApp_iPad_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s362687271.443349
+e362687271.718970
+r1
+xProcessPCH
+x/var/folders/IM/IM2WLkpKGR4al18RLLucUk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CPTTestApp_iPad_Prefix-bgbjlizexgxqunczkzujcmpddkmq/CPTTestApp_iPad_Prefix.pch.pth
+xCPTTestApp_iPad_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection37"Precompile CPTTestApp_iPad_Prefix.pch999d71272b9eb541^f10eb8272b9eb541^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/CPTTestApp_iPad_Prefix.pch0000000000000000^3471"ProcessPCH /var/folders/IM/IM2WLkpKGR4al18RLLucUk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CPTTestApp_iPad_Prefix-bgbjlizexgxqunczkzujcmpddkmq/CPTTestApp_iPad_Prefix.pch.pth CPTTestApp_iPad_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -iquote /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/CPTTestApp-iPad-generated-files.hmap -I/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/CPTTestApp-iPad-own-target-headers.hmap -I/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/CPTTestApp-iPad-all-target-headers.hmap -iquote /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/CPTTestApp-iPad-project-headers.hmap -iquote../../framework -iquote../../framework/iPhoneOnly -iquote../../framework/MacOnly -iquote../../framework/Source -iquote../../framework/TestResources -I/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/include -I/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/DerivedSources/i386 -I/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/CPTTestApp-iPad.build/Debug-iphonesimulator/CPTTestApp-iPad.build/DerivedSources -F/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator -c /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/CPTTestApp_iPad_Prefix.pch -o /var/folders/IM/IM2WLkpKGR4al18RLLucUk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CPTTestApp_iPad_Prefix-bgbjlizexgxqunczkzujcmpddkmq/CPTTestApp_iPad_Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/IM/IM2WLkpKGR4al18RLLucUk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/CPTTestApp_iPad_Prefix-bgbjlizexgxqunczkzujcmpddkmq/CPTTestApp_iPad_Prefix.pch.d36"E5880E58-7337-4A26-87A9-F764F511DA7D-
+
+CTouch /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app
+s362687272.142628
+e362687272.148782
+r1
+xTouch
+x/Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection144"Touch /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.appd19524282b9eb541^481826282b9eb541^---0#0#0#--444"Touch ../../build/Debug-iphonesimulator/CPTTestApp-iPad.app    cd /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/../../build/Debug-iphonesimulator/CPTTestApp-iPad.app36"FF062406-7312-4DC0-AC26-DFDEAA46D550-
+
