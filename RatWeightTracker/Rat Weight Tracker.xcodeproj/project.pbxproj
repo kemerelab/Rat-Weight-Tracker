@@ -11,6 +11,8 @@
 		3652296A159D468A0072A4B9 /* test_tubes.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 36522969159D468A0072A4B9 /* test_tubes.jpeg */; };
 		3652296D159D49200072A4B9 /* SpreadsheetUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652296C159D49200072A4B9 /* SpreadsheetUtility.m */; };
 		36522970159D52B90072A4B9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652296F159D52B90072A4B9 /* MBProgressHUD.m */; };
+		C0862D4915A5ED7900E31520 /* ExperimentCreatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0862D4715A5ED7900E31520 /* ExperimentCreatorViewController.m */; };
+		C0862D4A15A5ED7900E31520 /* ExperimentCreatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0862D4815A5ED7900E31520 /* ExperimentCreatorViewController.xib */; };
 		C15F5B7B156434D10061BFA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C15F5B7A156434D10061BFA1 /* UIKit.framework */; };
 		C15F5B7D156434D10061BFA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C15F5B7C156434D10061BFA1 /* Foundation.framework */; };
 		C15F5B7F156434D10061BFA1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C15F5B7E156434D10061BFA1 /* CoreGraphics.framework */; };
@@ -182,6 +184,13 @@
 		3652296C159D49200072A4B9 /* SpreadsheetUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpreadsheetUtility.m; sourceTree = "<group>"; };
 		3652296E159D52B90072A4B9 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		3652296F159D52B90072A4B9 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		C0862D4615A5ED7900E31520 /* ExperimentCreatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExperimentCreatorViewController.h; sourceTree = "<group>"; };
+		C0862D4715A5ED7900E31520 /* ExperimentCreatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExperimentCreatorViewController.m; sourceTree = "<group>"; };
+		C0862D4815A5ED7900E31520 /* ExperimentCreatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExperimentCreatorViewController.xib; sourceTree = "<group>"; };
+		C0862D7D15A6112900E31520 /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractActionSheetPicker.h; sourceTree = "<group>"; };
+		C0862D7E15A6112900E31520 /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractActionSheetPicker.m; sourceTree = "<group>"; };
+		C0862D7F15A6112900E31520 /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionSheetDatePicker.h; sourceTree = "<group>"; };
+		C0862D8015A6112900E31520 /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDatePicker.m; sourceTree = "<group>"; };
 		C0F0EB3615767E4900BBEC0A /* GData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GData.h; sourceTree = "<group>"; };
 		C0F0EB3715767E4900BBEC0A /* GDataACL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataACL.h; sourceTree = "<group>"; };
 		C0F0EB3815767E4900BBEC0A /* GDataACLKeyedRole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataACLKeyedRole.h; sourceTree = "<group>"; };
@@ -650,6 +659,16 @@
 			path = CorePlotHeaders;
 			sourceTree = "<group>";
 		};
+		C0862D4515A5ED2100E31520 /* Experiment Creator */ = {
+			isa = PBXGroup;
+			children = (
+				C0862D4615A5ED7900E31520 /* ExperimentCreatorViewController.h */,
+				C0862D4715A5ED7900E31520 /* ExperimentCreatorViewController.m */,
+				C0862D4815A5ED7900E31520 /* ExperimentCreatorViewController.xib */,
+			);
+			name = "Experiment Creator";
+			sourceTree = "<group>";
+		};
 		C0F0EB3515767E4900BBEC0A /* Headers */ = {
 			isa = PBXGroup;
 			children = (
@@ -1018,6 +1037,7 @@
 				C15F5BF7156441320061BFA1 /* App Delegate */,
 				C15F5BF81564413B0061BFA1 /* App Controller */,
 				C15F5BF4156440EC0061BFA1 /* Main Menu */,
+				C0862D4515A5ED2100E31520 /* Experiment Creator */,
 				C15F5BF5156441020061BFA1 /* Log */,
 				C15F5C3515644D5D0061BFA1 /* Rat Info */,
 				C15F5BF6156441040061BFA1 /* Add Entry */,
@@ -1029,6 +1049,10 @@
 		C15F5B81156434D10061BFA1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C0862D7D15A6112900E31520 /* AbstractActionSheetPicker.h */,
+				C0862D7E15A6112900E31520 /* AbstractActionSheetPicker.m */,
+				C0862D7F15A6112900E31520 /* ActionSheetDatePicker.h */,
+				C0862D8015A6112900E31520 /* ActionSheetDatePicker.m */,
 				3652296E159D52B90072A4B9 /* MBProgressHUD.h */,
 				3652296F159D52B90072A4B9 /* MBProgressHUD.m */,
 				3652296B159D49200072A4B9 /* SpreadsheetUtility.h */,
@@ -1248,6 +1272,7 @@
 				C15F5BF3156440CE0061BFA1 /* NewEntryViewController.xib in Resources */,
 				C15F5C3415644D570061BFA1 /* RatInfoViewController.xib in Resources */,
 				3652296A159D468A0072A4B9 /* test_tubes.jpeg in Resources */,
+				C0862D4A15A5ED7900E31520 /* ExperimentCreatorViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1269,6 +1294,7 @@
 				C15F5C3315644D570061BFA1 /* RatInfoViewController.m in Sources */,
 				3652296D159D49200072A4B9 /* SpreadsheetUtility.m in Sources */,
 				36522970159D52B90072A4B9 /* MBProgressHUD.m in Sources */,
+				C0862D4915A5ED7900E31520 /* ExperimentCreatorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1359,6 +1385,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1378,6 +1405,7 @@
 					"-lxml2",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1387,6 +1415,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Rat Weight Tracker/Rat Weight Tracker-Prefix.pch";
@@ -1405,6 +1435,7 @@
 					"-lxml2",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;

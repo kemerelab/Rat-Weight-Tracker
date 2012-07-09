@@ -20,6 +20,7 @@
 @property (nonatomic,retain) IBOutlet MOGlassButton* logButton;
 @property (nonatomic,retain) IBOutlet MOGlassButton* addNewButton;
 @property (nonatomic,retain) IBOutlet MOGlassButton* loginButton;
+@property (nonatomic,retain) IBOutlet MOGlassButton* exprButton;
 
 @property (nonatomic,retain) IBOutlet UILabel* usernameLabel;
 
@@ -39,5 +40,7 @@
 - (IBAction) addNewPressed;
 
 - (IBAction) loginPressed;
+
+- (IBAction) newExperimentPressed;
 
 @end

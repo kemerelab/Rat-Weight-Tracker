@@ -11,12 +11,12 @@
 #import "GData.h"
 #import "LogViewController.h"
 #import "MBProgressHUD.h"
-
+#import "ExperimentCreatorViewController.h"
 
 @implementation MainMenuViewController
 
 
-@synthesize logButton, addNewButton, loginButton;
+@synthesize logButton, addNewButton, loginButton, exprButton;
 @synthesize usernameLabel;
 @synthesize worksheetDict;
 @synthesize spreadSheet;
@@ -147,6 +147,7 @@ finishedWithWorksheetFeed:(GDataFeedWorksheet *)feed
     [logButton setupAsGreenButton];
     [addNewButton setupAsRedButton];
     [loginButton setupAsGreenButton];
+    [exprButton setupAsRedButton];
     
     self.view.backgroundColor = [UIColor clearColor];
         
@@ -174,6 +175,13 @@ finishedWithWorksheetFeed:(GDataFeedWorksheet *)feed
     NewEntryViewController *newcon = [[NewEntryViewController alloc] initWithWorksheets:worksheets andService:service];
     [navcon pushViewController:newcon animated:YES];
     
+}
+
+- (IBAction) newExperimentPressed
+{
+    UINavigationController *navcon = [self navigationController];
+    ExperimentCreatorViewController *exprCon = [[ExperimentCreatorViewController alloc] initWithService:self.service];
+    [navcon pushViewController:exprCon animated:YES];
 }
 
 - (IBAction) loginPressed {
