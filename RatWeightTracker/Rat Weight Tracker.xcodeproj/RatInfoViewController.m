@@ -17,8 +17,7 @@
 @synthesize ratNameLabel, entriesTable, notesView;
 @synthesize service, worksheet;
 @synthesize weightEntries;
-
-
+@synthesize graphView, graph, plotData;
 
 - (void)viewDidLoad
 {
@@ -122,13 +121,89 @@ finishedWithNoteFeed:(GDataFeedSpreadsheetCell*) feed
 - (void) drawGraph {
     
     
-    // Draw the graph here....
+    NSLog(@"Starting to draw graph..");
     
+    NSDateFormatter* dateformat = [[NSDateFormatter alloc] init];
+    [dateformat setDateFormat:@"M/d/yyyy"];
+    NSDate *refDate = [dateformat dateFromString:[[weightEntries objectAtIndex:0] objectForKey:@"date"]];
+    NSTimeInterval oneDay = 24 * 60 * 60;
+    
+    // Create graph from theme
+    graph = [(CPTXYGraph *)[CPTXYGraph alloc] initWithFrame:CGRectZero];
+	CPTTheme *theme = [CPTTheme themeNamed:kCPTDarkGradientTheme];
+	[graph applyTheme:theme];
+    graphView.hostedGraph = graph;
+    
+    // Setup scatter plot space
+	CPTXYPlotSpace *plotSpace = (CPTXYPlotSpace *)graph.defaultPlotSpace;
+    plotSpace.allowsUserInteraction = YES;
+	NSTimeInterval xLow		  = 0.0f;
+	plotSpace.xRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(xLow) length:CPTDecimalFromFloat(oneDay * 7)];
+	plotSpace.yRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(-100.0) length:CPTDecimalFromFloat(1000.0)];
+
+    // Axes
+	CPTXYAxisSet *axisSet = (CPTXYAxisSet *)graph.axisSet;
+	CPTXYAxis *x		  = axisSet.xAxis;
+	x.majorIntervalLength		  = CPTDecimalFromFloat(oneDay);
+	x.orthogonalCoordinateDecimal = CPTDecimalFromString(@"2");
+	x.minorTicksPerInterval		  = 0;
+    
+	NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
+	dateFormatter.dateStyle = kCFDateFormatterShortStyle;
+	CPTTimeFormatter *timeFormatter = [[[CPTTimeFormatter alloc] initWithDateFormatter:dateFormatter] autorelease];
+	timeFormatter.referenceDate = refDate;
+	x.labelFormatter			= timeFormatter;
+    
+	CPTXYAxis *y = axisSet.yAxis;
+	y.majorIntervalLength		  = CPTDecimalFromString(@"100.0");
+	y.minorTicksPerInterval		  = 5;
+	y.orthogonalCoordinateDecimal = CPTDecimalFromFloat(oneDay);
+    
+    
+	// Create a plot that uses the data source method
+	CPTScatterPlot *dataSourceLinePlot = [[[CPTScatterPlot alloc] init] autorelease];
+	dataSourceLinePlot.identifier = @"Date Plot";
+    
+	CPTMutableLineStyle *lineStyle = [[dataSourceLinePlot.dataLineStyle mutableCopy] autorelease];
+	lineStyle.lineWidth				 = 3.f;
+	lineStyle.lineColor				 = [CPTColor greenColor];
+	dataSourceLinePlot.dataLineStyle = lineStyle;
+    
+	dataSourceLinePlot.dataSource = self;
+	[graph addPlot:dataSourceLinePlot];
+    
+}
+
+-(NSUInteger)numberOfRecordsForPlot:(CPTPlot *)plot
+{
+	return weightEntries.count;
+}
+
+-(NSNumber *)numberForPlot:(CPTPlot *)plot field:(NSUInteger)fieldEnum recordIndex:(NSUInteger)index
+{
+    //NSLog(@"index = %d", index);
+    
+    if (fieldEnum == CPTScatterPlotFieldY) {
+        NSString* weight = [[weightEntries objectAtIndex:index] objectForKey:@"weight"];
+        //NSLog(@"index = %d, x = %d", index, [weight intValue]);
+    
+        if ([weight length] == 0) return nil;
+    
+        else return [NSDecimalNumber numberWithInt:[weight intValue]];
+    }
+    
+    if (fieldEnum == CPTScatterPlotFieldX){
+        NSTimeInterval oneDay = 24 * 60 * 60;
+        NSTimeInterval x = oneDay*index;
+        return [NSDecimalNumber numberWithFloat:x];
+    }
+    
+    else return nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    if (UIInterfaceOrientationPortrait) return YES;
+    if (interfaceOrientation == UIInterfaceOrientationPortrait) return YES;
 	else return NO;
 }
 

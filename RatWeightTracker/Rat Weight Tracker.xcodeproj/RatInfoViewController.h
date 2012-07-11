@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "GData.h"
 #import "SpreadsheetUtility.h"
+#import "CorePlot-CocoaTouch.h"
 
-@interface RatInfoViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
+@interface RatInfoViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, CPTPlotDataSource>{
  
     int ratColumn;
     NSString* name;
@@ -21,6 +22,12 @@
 @property (nonatomic, retain) IBOutlet UITableView* entriesTable;
 
 @property (nonatomic, retain) IBOutlet UITextView* notesView;
+
+@property (nonatomic, retain) IBOutlet CPTGraphHostingView* graphView;
+
+@property (nonatomic, retain) CPTXYGraph* graph;
+
+@property (nonatomic, retain) NSArray* plotData;
 
 @property (nonatomic,retain) GDataServiceGoogleSpreadsheet* service;
 

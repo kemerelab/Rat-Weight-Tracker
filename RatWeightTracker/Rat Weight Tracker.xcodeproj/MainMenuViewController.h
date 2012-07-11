@@ -12,9 +12,11 @@
 
 #import "GData.h"
 
+@class Reachability;
 
 @interface MainMenuViewController : UIViewController  {
-    
+    Reachability* internetReachable;
+    BOOL loggedIn;
 }
 
 @property (nonatomic,retain) IBOutlet MOGlassButton* logButton;
@@ -34,6 +36,7 @@
 @property (nonatomic,retain) GDataEntrySpreadsheet* spreadSheet;
 @property (nonatomic,retain) NSArray *worksheets;
 @property (nonatomic,retain) GDataServiceGoogleSpreadsheet* service;
+@property (nonatomic,retain) GDataServiceGoogleDocs* docsService;
 
 - (IBAction) logPressed;
 
@@ -42,5 +45,7 @@
 - (IBAction) loginPressed;
 
 - (IBAction) newExperimentPressed;
+
+- (void)checkNetworkStatus:(NSNotification *)notice;
 
 @end

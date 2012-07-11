@@ -13,6 +13,12 @@
 		36522970159D52B90072A4B9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652296F159D52B90072A4B9 /* MBProgressHUD.m */; };
 		C0862D4915A5ED7900E31520 /* ExperimentCreatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0862D4715A5ED7900E31520 /* ExperimentCreatorViewController.m */; };
 		C0862D4A15A5ED7900E31520 /* ExperimentCreatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0862D4815A5ED7900E31520 /* ExperimentCreatorViewController.xib */; };
+		C0FD911115AB5259003FC7EB /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FD910815AB5259003FC7EB /* AbstractActionSheetPicker.m */; };
+		C0FD911215AB5259003FC7EB /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FD910A15AB5259003FC7EB /* ActionSheetDatePicker.m */; };
+		C0FD911315AB5259003FC7EB /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FD910C15AB5259003FC7EB /* ActionSheetDistancePicker.m */; };
+		C0FD911415AB5259003FC7EB /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FD910E15AB5259003FC7EB /* ActionSheetStringPicker.m */; };
+		C0FD911515AB5259003FC7EB /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FD911015AB5259003FC7EB /* DistancePickerView.m */; };
+		C0FD912D15ADD030003FC7EB /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FD912C15ADD030003FC7EB /* Reachability.m */; };
 		C15F5B7B156434D10061BFA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C15F5B7A156434D10061BFA1 /* UIKit.framework */; };
 		C15F5B7D156434D10061BFA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C15F5B7C156434D10061BFA1 /* Foundation.framework */; };
 		C15F5B7F156434D10061BFA1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C15F5B7E156434D10061BFA1 /* CoreGraphics.framework */; };
@@ -187,10 +193,6 @@
 		C0862D4615A5ED7900E31520 /* ExperimentCreatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExperimentCreatorViewController.h; sourceTree = "<group>"; };
 		C0862D4715A5ED7900E31520 /* ExperimentCreatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExperimentCreatorViewController.m; sourceTree = "<group>"; };
 		C0862D4815A5ED7900E31520 /* ExperimentCreatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExperimentCreatorViewController.xib; sourceTree = "<group>"; };
-		C0862D7D15A6112900E31520 /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractActionSheetPicker.h; sourceTree = "<group>"; };
-		C0862D7E15A6112900E31520 /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractActionSheetPicker.m; sourceTree = "<group>"; };
-		C0862D7F15A6112900E31520 /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionSheetDatePicker.h; sourceTree = "<group>"; };
-		C0862D8015A6112900E31520 /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDatePicker.m; sourceTree = "<group>"; };
 		C0F0EB3615767E4900BBEC0A /* GData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GData.h; sourceTree = "<group>"; };
 		C0F0EB3715767E4900BBEC0A /* GDataACL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataACL.h; sourceTree = "<group>"; };
 		C0F0EB3815767E4900BBEC0A /* GDataACLKeyedRole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataACLKeyedRole.h; sourceTree = "<group>"; };
@@ -508,6 +510,18 @@
 		C0F0EC7015767E4900BBEC0A /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
 		C0F0EC7115767E4900BBEC0A /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
 		C0F0EC7215767E4900BBEC0A /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		C0FD910715AB5259003FC7EB /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbstractActionSheetPicker.h; path = Pickers/AbstractActionSheetPicker.h; sourceTree = "<group>"; };
+		C0FD910815AB5259003FC7EB /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbstractActionSheetPicker.m; path = Pickers/AbstractActionSheetPicker.m; sourceTree = "<group>"; };
+		C0FD910915AB5259003FC7EB /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActionSheetDatePicker.h; path = Pickers/ActionSheetDatePicker.h; sourceTree = "<group>"; };
+		C0FD910A15AB5259003FC7EB /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDatePicker.m; path = Pickers/ActionSheetDatePicker.m; sourceTree = "<group>"; };
+		C0FD910B15AB5259003FC7EB /* ActionSheetDistancePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActionSheetDistancePicker.h; path = Pickers/ActionSheetDistancePicker.h; sourceTree = "<group>"; };
+		C0FD910C15AB5259003FC7EB /* ActionSheetDistancePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDistancePicker.m; path = Pickers/ActionSheetDistancePicker.m; sourceTree = "<group>"; };
+		C0FD910D15AB5259003FC7EB /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActionSheetStringPicker.h; path = Pickers/ActionSheetStringPicker.h; sourceTree = "<group>"; };
+		C0FD910E15AB5259003FC7EB /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActionSheetStringPicker.m; path = Pickers/ActionSheetStringPicker.m; sourceTree = "<group>"; };
+		C0FD910F15AB5259003FC7EB /* DistancePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DistancePickerView.h; path = Pickers/DistancePickerView.h; sourceTree = "<group>"; };
+		C0FD911015AB5259003FC7EB /* DistancePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DistancePickerView.m; path = Pickers/DistancePickerView.m; sourceTree = "<group>"; };
+		C0FD912B15ADD030003FC7EB /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		C0FD912C15ADD030003FC7EB /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		C15F5B76156434D10061BFA1 /* Rat Weight Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rat Weight Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C15F5B7A156434D10061BFA1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C15F5B7C156434D10061BFA1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -993,6 +1007,23 @@
 			path = Headers;
 			sourceTree = "<group>";
 		};
+		C0FD911615AB5273003FC7EB /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				C0FD910715AB5259003FC7EB /* AbstractActionSheetPicker.h */,
+				C0FD910815AB5259003FC7EB /* AbstractActionSheetPicker.m */,
+				C0FD910915AB5259003FC7EB /* ActionSheetDatePicker.h */,
+				C0FD910A15AB5259003FC7EB /* ActionSheetDatePicker.m */,
+				C0FD910B15AB5259003FC7EB /* ActionSheetDistancePicker.h */,
+				C0FD910C15AB5259003FC7EB /* ActionSheetDistancePicker.m */,
+				C0FD910D15AB5259003FC7EB /* ActionSheetStringPicker.h */,
+				C0FD910E15AB5259003FC7EB /* ActionSheetStringPicker.m */,
+				C0FD910F15AB5259003FC7EB /* DistancePickerView.h */,
+				C0FD911015AB5259003FC7EB /* DistancePickerView.m */,
+			);
+			name = Pickers;
+			sourceTree = "<group>";
+		};
 		C15F5B6B156434D00061BFA1 = {
 			isa = PBXGroup;
 			children = (
@@ -1029,6 +1060,7 @@
 		C15F5B80156434D10061BFA1 /* Rat Weight Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				C0FD911615AB5273003FC7EB /* Pickers */,
 				36522969159D468A0072A4B9 /* test_tubes.jpeg */,
 				364F74D0159E2A3200265915 /* CorePlotHeaders */,
 				C0F0EB3515767E4900BBEC0A /* Headers */,
@@ -1049,10 +1081,8 @@
 		C15F5B81156434D10061BFA1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C0862D7D15A6112900E31520 /* AbstractActionSheetPicker.h */,
-				C0862D7E15A6112900E31520 /* AbstractActionSheetPicker.m */,
-				C0862D7F15A6112900E31520 /* ActionSheetDatePicker.h */,
-				C0862D8015A6112900E31520 /* ActionSheetDatePicker.m */,
+				C0FD912B15ADD030003FC7EB /* Reachability.h */,
+				C0FD912C15ADD030003FC7EB /* Reachability.m */,
 				3652296E159D52B90072A4B9 /* MBProgressHUD.h */,
 				3652296F159D52B90072A4B9 /* MBProgressHUD.m */,
 				3652296B159D49200072A4B9 /* SpreadsheetUtility.h */,
@@ -1295,6 +1325,12 @@
 				3652296D159D49200072A4B9 /* SpreadsheetUtility.m in Sources */,
 				36522970159D52B90072A4B9 /* MBProgressHUD.m in Sources */,
 				C0862D4915A5ED7900E31520 /* ExperimentCreatorViewController.m in Sources */,
+				C0FD911115AB5259003FC7EB /* AbstractActionSheetPicker.m in Sources */,
+				C0FD911215AB5259003FC7EB /* ActionSheetDatePicker.m in Sources */,
+				C0FD911315AB5259003FC7EB /* ActionSheetDistancePicker.m in Sources */,
+				C0FD911415AB5259003FC7EB /* ActionSheetStringPicker.m in Sources */,
+				C0FD911515AB5259003FC7EB /* DistancePickerView.m in Sources */,
+				C0FD912D15ADD030003FC7EB /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

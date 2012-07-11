@@ -10,9 +10,17 @@
 #import "GData.h"
 #import "MOGlassButton.h"
 
-@interface ExperimentCreatorViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface ExperimentCreatorViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
+    
+    int numRows;
+    int numCols;
+}
 
 @property (nonatomic,retain) GDataServiceGoogleSpreadsheet* service;
+
+@property (nonatomic,retain) GDataServiceGoogleDocs *docsService;
+
+@property (nonatomic,retain) GDataEntrySpreadsheet* newSpreadsheet;
 
 @property (nonatomic,retain) IBOutlet UITextField* nameField;
 
@@ -28,6 +36,10 @@
 
 @property (nonatomic,retain) NSMutableArray* ratList;
 
+@property (nonatomic,retain) IBOutlet UILabel* startDateLabel;
+
+@property (nonatomic,retain) IBOutlet UILabel* endDateLabel;
+
 @property (nonatomic,retain) NSDate* startDate;
 
 @property (nonatomic,retain) NSDate* endDate;
@@ -36,7 +48,9 @@
 
 @property (nonatomic,retain) IBOutlet MOGlassButton* editEndButton;
 
-- (id) initWithService:(GDataServiceGoogleSpreadsheet*)serv;
+@property (nonatomic,retain) IBOutlet MOGlassButton* createButton;
+
+- (id) initWithService:(GDataServiceGoogleSpreadsheet*)serv andDocsService:(GDataServiceGoogleDocs*)docs;
 
 - (IBAction) buttonPressed:(id)sender;
 

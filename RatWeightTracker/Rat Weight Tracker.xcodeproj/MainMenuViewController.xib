@@ -160,7 +160,7 @@
 					<object class="IBUILabel" id="465435363">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{40, 963}, {265, 21}}</string>
+						<string key="NSFrame">{{40, 908}, {265, 21}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
@@ -266,6 +266,14 @@
 					<int key="connectionID">17</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">usernameLabel</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="465435363"/>
+					</object>
+					<int key="connectionID">20</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">logPressed</string>
 						<reference key="source" ref="713303171"/>
@@ -330,11 +338,11 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="717473310"/>
-							<reference ref="465435363"/>
 							<reference ref="546622925"/>
 							<reference ref="713303171"/>
 							<reference ref="85311185"/>
 							<reference ref="322272124"/>
+							<reference ref="465435363"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -421,7 +429,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">18</int>
+			<int key="maxID">20</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

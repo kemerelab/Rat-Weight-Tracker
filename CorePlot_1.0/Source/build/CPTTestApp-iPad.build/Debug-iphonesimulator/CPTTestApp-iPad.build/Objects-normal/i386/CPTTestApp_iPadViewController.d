@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/Classes/CPTTestApp_iPadViewController.m \
-  /Users/dummy/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/Classes/CPTTestApp_iPadViewController.h \
+  /Users/helpdesk/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/Classes/CPTTestApp_iPadViewController.m \
+  /Users/helpdesk/Desktop/Rat-Weight-Tracker/CorePlot_1.0/Source/examples/CPTTestApp-iPad/Classes/CPTTestApp_iPadViewController.h \
   ../../framework/CorePlot-CocoaTouch.h \
   ../../framework/Source/CPTAnnotation.h \
   ../../framework/Source/CPTDefinitions.h \
