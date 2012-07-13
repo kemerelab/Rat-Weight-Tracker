@@ -88,7 +88,7 @@ finishedWithSpreadsheetFeed:(GDataFeedSpreadsheet *)feed
             GDataTextConstruct *titleTextConstruct = [next title];
             NSString *title = [titleTextConstruct stringValue];
             
-            if ([title rangeOfString:@"Kemere Lab Rat Weights"].location == NSNotFound){
+            if ([title rangeOfString:@"Rat Weights"].location == NSNotFound){
                 NSLog(@"I do not care about %@", title);
             } else {
                 NSLog(@"Found %@", title);
