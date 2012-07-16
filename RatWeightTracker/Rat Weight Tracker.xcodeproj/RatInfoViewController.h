@@ -25,9 +25,9 @@
 
 @property (nonatomic, retain) IBOutlet CPTGraphHostingView* graphView;
 
-@property (nonatomic, retain) CPTXYGraph* graph;
+@property (nonatomic, retain) CPTXYGraph* weightGraph;
 
-@property (nonatomic, retain) NSArray* plotData;
+@property (nonatomic, retain) CPTXYGraph* pelletGraph;
 
 @property (nonatomic,retain) GDataServiceGoogleSpreadsheet* service;
 
@@ -38,5 +38,7 @@
 @property (nonatomic,retain) SpreadsheetUtility* utility;
 
 -(id)initWithUtility:(SpreadsheetUtility*)util andRat:(NSDictionary*)rat;
+
+- (IBAction) switchPressed: (UISegmentedControl*)sender;
 
 @end

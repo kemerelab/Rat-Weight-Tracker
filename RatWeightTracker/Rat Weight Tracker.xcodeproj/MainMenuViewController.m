@@ -38,15 +38,6 @@
     if (self) {
         NSLog(@"Initializing Main Menu View Controller..");
         
-        loggedIn = NO;
-        // Currently default logs in to kemere.lab.sum2012 for easier testing.
-        if (!self.service) {
-            
-            self.docsService = [[GDataServiceGoogleDocs alloc] init];
-            [self.docsService setShouldCacheResponseData:YES];
-            [self.docsService setUserCredentialsWithUsername:@"kemere.lab.sum2012" password:@"r@tweight@pp"];
-            
-        } 
     }
     return self;
 }
@@ -67,7 +58,7 @@ finishedWithSpreadsheetFeed:(GDataFeedSpreadsheet *)feed
             GDataTextConstruct *titleTextConstruct = [next title];
             NSString *title = [titleTextConstruct stringValue];
             
-            if ([title rangeOfString:@"Kemere Lab Rat Weights"].location == NSNotFound){
+            if ([title rangeOfString:@"Rat Weights"].location == NSNotFound){
                 NSLog(@"I do not care about %@", title);
             } else {
                 NSLog(@"Found %@", title);
@@ -80,47 +71,11 @@ finishedWithSpreadsheetFeed:(GDataFeedSpreadsheet *)feed
             [self enable:addNewButton];
             [self enable:logButton];
             
-            //Found spreadsheet, send query to fetch its worksheets.
-            NSURL *worksheetsURL = [spreadSheet worksheetsFeedURL];
-            
-            [service fetchFeedWithURL:worksheetsURL 
-                             delegate:self 
-                    didFinishSelector:@selector(ticket:finishedWithWorksheetFeed:error:)];
-            
-        } else NSLog(@"Could not find the spreadsheet Kemere Lab Rat Weights");
+        } else NSLog(@"Could not find any Rat Weights");
         
         
     } else {
         NSLog(@"Fetch error: %@", error.description);
-    }
-}
-
-- (void)ticket:(GDataServiceTicket *)ticket
-finishedWithWorksheetFeed:(GDataFeedWorksheet *)feed
-         error:(NSError *)error {
-    
-    if (error == nil){
-        
-        //Successfully retrieved worksheet feed.
-        self.workSheetFeed = feed;
-        self.worksheets = [feed entries];
-        
-        NSMutableDictionary *temp = [[[NSMutableDictionary alloc] init] autorelease];
-        
-        for (int i = 0; i < [[feed entries] count]; i++) {
-            GDataEntryWorksheet *ws = [[feed entries] objectAtIndex:i];
-            
-            NSLog(@"Found worksheet %@ : with rows:%d and columns:%d", 
-                  [[ws title] stringValue], [ws rowCount], [ws columnCount]);
-            
-            [temp setObject:ws forKey:[[ws title] stringValue]];
-        }
-        
-        self.worksheetDict = [[NSDictionary alloc]  initWithDictionary:temp];
-        
-        NSLog(@"%@", [worksheetDict allKeys]);
-        
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
     }
 }
 
@@ -245,10 +200,12 @@ finishedWithWorksheetFeed:(GDataFeedWorksheet *)feed
         }
 
         self.service = [[[GDataServiceGoogleSpreadsheet alloc] init] retain];
-
         [self.service setShouldCacheResponseData:YES];
-
         [self.service setUserCredentialsWithUsername:username password:password];
+        
+        self.docsService = [[[GDataServiceGoogleDocs alloc] init] retain];
+        [self.docsService setShouldCacheResponseData:YES];
+        [self.docsService setUserCredentialsWithUsername:username password:password];
 
         [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 
@@ -258,6 +215,7 @@ finishedWithWorksheetFeed:(GDataFeedWorksheet *)feed
     }
     
     if ([alertView.title isEqualToString:@"Successful Login"]){
+        // user clicked to save username.
         NSLog(@"Saving name...");
         NSString* username = [self.usernameLabel.text stringByReplacingOccurrencesOfString:@"Logged in as:" withString:@""];
         [[NSUserDefaults standardUserDefaults] setObject:username forKey:@"ratweightusername"];
@@ -282,6 +240,7 @@ finishedWithWorksheetFeed:(GDataFeedWorksheet *)feed
         [alert show];
         
         self.service = nil;
+        self.docsService = nil;
         [self setUsername:@""];
     }
     

@@ -13,6 +13,10 @@
 		36522970159D52B90072A4B9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3652296F159D52B90072A4B9 /* MBProgressHUD.m */; };
 		C0862D4915A5ED7900E31520 /* ExperimentCreatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0862D4715A5ED7900E31520 /* ExperimentCreatorViewController.m */; };
 		C0862D4A15A5ED7900E31520 /* ExperimentCreatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0862D4815A5ED7900E31520 /* ExperimentCreatorViewController.xib */; };
+		C0E2308A15B47FC5004F7D03 /* ratscale_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = C0E2308915B47FC5004F7D03 /* ratscale_114x114.png */; };
+		C0E2308C15B47FEC004F7D03 /* ratscale_57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = C0E2308B15B47FEC004F7D03 /* ratscale_57x57.png */; };
+		C0E2308E15B4804D004F7D03 /* ratscale_144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = C0E2308D15B4804D004F7D03 /* ratscale_144x144.png */; };
+		C0E2309015B48050004F7D03 /* ratscale_72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = C0E2308F15B48050004F7D03 /* ratscale_72x72.png */; };
 		C0FD911115AB5259003FC7EB /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FD910815AB5259003FC7EB /* AbstractActionSheetPicker.m */; };
 		C0FD911215AB5259003FC7EB /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FD910A15AB5259003FC7EB /* ActionSheetDatePicker.m */; };
 		C0FD911315AB5259003FC7EB /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FD910C15AB5259003FC7EB /* ActionSheetDistancePicker.m */; };
@@ -193,6 +197,10 @@
 		C0862D4615A5ED7900E31520 /* ExperimentCreatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExperimentCreatorViewController.h; sourceTree = "<group>"; };
 		C0862D4715A5ED7900E31520 /* ExperimentCreatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExperimentCreatorViewController.m; sourceTree = "<group>"; };
 		C0862D4815A5ED7900E31520 /* ExperimentCreatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExperimentCreatorViewController.xib; sourceTree = "<group>"; };
+		C0E2308915B47FC5004F7D03 /* ratscale_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ratscale_114x114.png; sourceTree = "<group>"; };
+		C0E2308B15B47FEC004F7D03 /* ratscale_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ratscale_57x57.png; sourceTree = "<group>"; };
+		C0E2308D15B4804D004F7D03 /* ratscale_144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ratscale_144x144.png; sourceTree = "<group>"; };
+		C0E2308F15B48050004F7D03 /* ratscale_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ratscale_72x72.png; sourceTree = "<group>"; };
 		C0F0EB3615767E4900BBEC0A /* GData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GData.h; sourceTree = "<group>"; };
 		C0F0EB3715767E4900BBEC0A /* GDataACL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataACL.h; sourceTree = "<group>"; };
 		C0F0EB3815767E4900BBEC0A /* GDataACLKeyedRole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataACLKeyedRole.h; sourceTree = "<group>"; };
@@ -1027,6 +1035,10 @@
 		C15F5B6B156434D00061BFA1 = {
 			isa = PBXGroup;
 			children = (
+				C0E2308F15B48050004F7D03 /* ratscale_72x72.png */,
+				C0E2308D15B4804D004F7D03 /* ratscale_144x144.png */,
+				C0E2308B15B47FEC004F7D03 /* ratscale_57x57.png */,
+				C0E2308915B47FC5004F7D03 /* ratscale_114x114.png */,
 				364F74C2159E295B00265915 /* CorePlot-CocoaTouch.xcodeproj */,
 				C15F5C08156446430061BFA1 /* QuartzCore.framework */,
 				C15F5BCC15643CEC0061BFA1 /* GData.xcodeproj */,
@@ -1303,6 +1315,10 @@
 				C15F5C3415644D570061BFA1 /* RatInfoViewController.xib in Resources */,
 				3652296A159D468A0072A4B9 /* test_tubes.jpeg in Resources */,
 				C0862D4A15A5ED7900E31520 /* ExperimentCreatorViewController.xib in Resources */,
+				C0E2308A15B47FC5004F7D03 /* ratscale_114x114.png in Resources */,
+				C0E2308C15B47FEC004F7D03 /* ratscale_57x57.png in Resources */,
+				C0E2308E15B4804D004F7D03 /* ratscale_144x144.png in Resources */,
+				C0E2309015B48050004F7D03 /* ratscale_72x72.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -26,6 +26,8 @@
 
 @property (nonatomic,retain) IBOutlet UITextField* ratNameField;
 
+@property (nonatomic,retain) IBOutlet UITextField* baselineField;
+
 @property (nonatomic,retain) IBOutlet MOGlassButton* addRatButton;
 
 @property (nonatomic,retain) IBOutlet MOGlassButton* removeRatButton;

@@ -16,7 +16,7 @@
 
 @implementation ExperimentCreatorViewController
 
-@synthesize nameField, ratNameField;
+@synthesize nameField, ratNameField, baselineField;
 
 @synthesize ratList, selectedRat, ratTable;
 
@@ -85,7 +85,8 @@
 -(IBAction)buttonPressed:(id)sender
 {
     if (sender == self.addRatButton){
-        [self.ratList addObject:ratNameField.text];
+        [self.ratList addObject:
+         [NSDictionary dictionaryWithObjectsAndKeys:self.ratNameField.text, @"name", self.baselineField.text, @"baseline", nil]];
         self.ratNameField.text = @"";
         [self.ratTable reloadData];
     }
@@ -120,7 +121,7 @@
         NSTimeInterval startInterval = [startDate timeIntervalSinceNow];
         NSTimeInterval endInterval = [endDate timeIntervalSinceNow];
         NSTimeInterval diff = endInterval - startInterval;
-        numRows = diff / (60*60*24);
+        numRows = diff / (60*60*24) + 1;
         NSLog(@"%d rows and %d columns", numRows, numCols);
         
         
@@ -269,11 +270,11 @@ finishedWithRetrievingBaselineData:(GDataFeedSpreadsheetCell *)feed
         GDataSpreadsheetCell* cell = [thisCellEntry cell];
         
         if ([[thisCellEntry cell]row] == 1){
-            [cell setInputString:[ratList objectAtIndex:[cell column]-1]];
+            [cell setInputString:[[ratList objectAtIndex:[cell column]-1] objectForKey:@"name"]];
         }
         
         if ([[thisCellEntry cell]row] == 2){
-            // TODO: i will be a baseline...
+            [cell setInputString:[[ratList objectAtIndex:[cell column]-1] objectForKey:@"baseline"]];
         }
     }
     
@@ -311,7 +312,7 @@ finishedWithRetrievingData:(GDataFeedSpreadsheetCell *)feed
         
         if ([cell row] == 1){
             
-            [cell setInputString:[ratList objectAtIndex:[cell column]-2]];
+            [cell setInputString:[[ratList objectAtIndex:[cell column]-2] objectForKey:@"name"]];
         }
         
         if ([cell column] == 1){
@@ -434,11 +435,11 @@ finishedWithWorksheet:(GDataEntryWorksheet *)entry
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
     }
 
-    cell.textLabel.text = [self.ratList objectAtIndex:indexPath.row];
-    
+    cell.textLabel.text = [[self.ratList objectAtIndex:indexPath.row] objectForKey:@"name"];
+    cell.detailTextLabel.text = [[self.ratList objectAtIndex:indexPath.row] objectForKey:@"baseline"];
     return cell;
 }
 

@@ -16,7 +16,6 @@
 
 @interface MainMenuViewController : UIViewController  {
     Reachability* internetReachable;
-    BOOL loggedIn;
 }
 
 @property (nonatomic,retain) IBOutlet MOGlassButton* logButton;
