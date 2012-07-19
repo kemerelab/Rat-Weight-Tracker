@@ -43,13 +43,26 @@
 finishedWithDateFeed:(GDataFeedSpreadsheetCell *)feed
          error:(NSError *)error {
     
+    NSTimeInterval startInterval = [[NSDate date] timeIntervalSinceNow];
+    
     for (int i = 0; i < [[feed entries] count]; i++) {
         
         NSString *date = [[[[feed entries] objectAtIndex:i] cell] resultString];
         
+        NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
+        [formatter setDateFormat:@"M/d/yyyy"];
+        NSDate *endDate = [formatter dateFromString:date];
+        
+        NSTimeInterval endInterval = [endDate timeIntervalSinceNow];
+        NSTimeInterval diff = endInterval - startInterval;
+        
+        if (diff > 0) break;
+        
         if ([date length] == 0) break;
         
         // index indicates relative row
+        //[self.weightEntries insertObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                          //date, @"date", nil] atIndex:0];
         [self.weightEntries addObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:
                                   date, @"date", nil]];
     }
@@ -128,6 +141,13 @@ finishedWithNoteFeed:(GDataFeedSpreadsheetCell*) feed
     NSDate *refDate = [dateformat dateFromString:[[weightEntries objectAtIndex:0] objectForKey:@"date"]];
     NSTimeInterval oneDay = 24 * 60 * 60;
     
+    NSDate *todaysDate = [dateformat dateFromString:[[weightEntries objectAtIndex:[weightEntries count] -1] objectForKey:@"date"]];
+    
+    NSTimeInterval startInterval = [refDate timeIntervalSinceNow];
+    NSTimeInterval endInterval = [todaysDate timeIntervalSinceNow];
+    NSTimeInterval diff = endInterval - startInterval;
+    int diffDays = abs(diff / (60*60*24));
+    
     // Create graph from theme
     weightGraph = [(CPTXYGraph *)[CPTXYGraph alloc] initWithFrame:CGRectZero];
 	CPTTheme *theme = [CPTTheme themeNamed:kCPTDarkGradientTheme];
@@ -139,7 +159,7 @@ finishedWithNoteFeed:(GDataFeedSpreadsheetCell*) feed
 	CPTXYPlotSpace *plotSpace = (CPTXYPlotSpace *)weightGraph.defaultPlotSpace;
     plotSpace.allowsUserInteraction = YES;
 	NSTimeInterval xLow		  = 0.0f;
-	plotSpace.xRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(xLow) length:CPTDecimalFromFloat(oneDay * 7)];
+	plotSpace.xRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(diffDays*oneDay - 2*oneDay) length:CPTDecimalFromFloat(4*oneDay)];
 	plotSpace.yRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(-100.0) length:CPTDecimalFromFloat(1200.0)];
 
     // Axes
@@ -191,7 +211,7 @@ finishedWithNoteFeed:(GDataFeedSpreadsheetCell*) feed
     
     CPTXYPlotSpace *pelletPlotSpace = (CPTXYPlotSpace *)pelletGraph.defaultPlotSpace;
     pelletPlotSpace.allowsUserInteraction = YES;
-	pelletPlotSpace.xRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(xLow) length:CPTDecimalFromFloat(oneDay * 7)];
+	pelletPlotSpace.xRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(diffDays*oneDay - 2*oneDay) length:CPTDecimalFromFloat(4*oneDay)];
 	pelletPlotSpace.yRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(-1.0) length:CPTDecimalFromFloat(12.0)];
     
     // Axes
@@ -328,7 +348,7 @@ finishedWithNoteFeed:(GDataFeedSpreadsheetCell*) feed
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    NSDictionary *thisRat = [weightEntries objectAtIndex:indexPath.row];
+    NSDictionary *thisRat = [weightEntries objectAtIndex:[weightEntries count] - indexPath.row -1];
     cell.textLabel.text = [thisRat objectForKey:@"date"];
     
     int weight = [[thisRat objectForKey:@"weight"] intValue];

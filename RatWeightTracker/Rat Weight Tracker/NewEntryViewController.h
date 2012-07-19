@@ -44,6 +44,9 @@
 
 @property (nonatomic,retain) GDataEntrySpreadsheetCell* foundCell;
 
+@property (nonatomic, retain) UIPopoverController* pop;
+@property (nonatomic, retain) UITextView* notesView;
+
 
 @property (nonatomic,retain) IBOutlet MOGlassButton* one;
 @property (nonatomic,retain) IBOutlet MOGlassButton* two;

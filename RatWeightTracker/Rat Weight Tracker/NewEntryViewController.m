@@ -14,9 +14,9 @@
 
 @synthesize utility;
 
-@synthesize which;
+@synthesize which, pop;
 
-@synthesize notesButton, notes;
+@synthesize notesButton, notes, notesView;
 
 @synthesize addButton, one, two, three, four, five, six, seven, eight, nine, zero, clear;
 
@@ -319,22 +319,23 @@ finishedWithRatNameCellFeed:(GDataFeedSpreadsheetCell *)feed
 
 - (IBAction) notesPressed
 {
-    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Notes" message:@"Edit your note here:" delegate:self cancelButtonTitle:@"Continue" otherButtonTitles:nil];
-    
-    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
-    
-    if (self.notes != nil) {
-        UITextField* textField = [alert textFieldAtIndex:0];
-        textField.text = self.notes;
-    }
-    
-    [alert show];
+        UIViewController *con = [[UIViewController alloc] init];
+        if (self.notesView == nil){
+            self.notesView = [[UITextView alloc] init];
+        }
+        con.view = self.notesView;
+        con.contentSizeForViewInPopover = CGSizeMake(300, 400);
+        
+        self.pop = [[UIPopoverController alloc] initWithContentViewController:con];
+        [self.pop presentPopoverFromRect:self.notesButton.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
 }
 
 
 #pragma mark - adding new entry methods...
 
 - (IBAction) addEntryPressed{
+    
+    self.notes = self.notesView.text;
     
     NSLog(@"Add New Entry Pressed!");
     NSLog(@"Population:%@ \n Rat:%@ \n Row: %@ \n NewWeight = %@", [[selectedWorksheet title] stringValue], [selectedRat objectForKey:@"name"], [selectedRat objectForKey:@"column"], [weightLabel text]);
